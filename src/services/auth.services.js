@@ -3,9 +3,9 @@ const jwt = require("jsonwebtoken");
 class AuthServices {
   static genToken(payload) {
     try {
-      const token = jwt.sign(payload, "superchat", {
+      const token = jwt.sign(payload, "secretkey", {
         algorithm: "HS512",
-        expiresIn: "60m",
+        expiresIn: "30m",
       });
       return token;
     } catch (error) {
